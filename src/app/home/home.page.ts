@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private navController: NavController) { } 
+
+  ngOnInit() {    
+  }
+
+  goToPhoto(){
+    this.navController.navigateForward('/photo');
+  }
+
+  goToList(){
+    this.navController.navigateForward('/list');
+  }
 
 }

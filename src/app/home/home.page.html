@@ -1,20 +1,20 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Native OPS
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+    <ion-text>
+        <h4>Esta aplicación contiene dos funciones con funciones nativas: </h4>
+        <h5> - Tomar una foto y mostrar la geolocalización </h5>
+        <h5> - Mostrar un listado de elementos</h5>
+    </ion-text>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <section>
+        <ion-button expand="block" color="secondary" (click)="goToPhoto()">Take photo</ion-button>
+        <ion-button expand="block" color="warning" (click)="goToList()">Element list</ion-button>
+    </section>
 </ion-content>
