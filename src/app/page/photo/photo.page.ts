@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Camera, CameraResultType } from '@capacitor/camera'; 
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'; 
 import { GeolocationService } from 'src/app/service/geolocation.service';
+import { throwError } from 'rxjs';
 
 
 @Component({
@@ -34,7 +35,9 @@ export class PhotoPage implements OnInit {
    await this.geolocationService.getLocation().then((result) => {
     this.latitude = result.latitude;
     this.longitude = result.longitude;    
-   }).catch;   
+   }).catch((error) => {
+      return throwError("Error: " + error.message);
+   });      
   }
 
 }

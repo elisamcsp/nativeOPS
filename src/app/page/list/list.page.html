@@ -10,4 +10,14 @@
 
 <ion-content>
 
+    <ion-list>
+        <ion-item button *ngFor="let element of elements" (click)="elementItemOnClick()">
+            <ion-label>
+                <h2>Element Id: {{ element.elementId }}</h2>
+                <h3>Description: {{ element.description }}</h3>
+                <p>Other: {{ element.other }}</p>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+
 </ion-content>

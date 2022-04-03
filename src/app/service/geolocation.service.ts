@@ -8,7 +8,7 @@ export class GeolocationService {
 
   constructor() { }
 
-  async getLocation(){ 
+  async getLocation():Promise<any>{ 
     let position = await Geolocation.getCurrentPosition();
 
     return position.coords;
