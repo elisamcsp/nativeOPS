@@ -3,8 +3,8 @@ import { Dialog } from '@capacitor/dialog';
 
 const showAlert = async () => {
   await Dialog.alert({
-    title: 'Aviso',
-    message: 'Esta acción está "En construcción"',
+    title: 'Information!!!',
+    message: '"In construction"',
   });
 };
 

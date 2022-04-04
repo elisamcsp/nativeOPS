@@ -31,13 +31,15 @@ export class PhotoPage implements OnInit {
     });
 
     this.photo = this.sanitizer.bypassSecurityTrustResourceUrl(image && (image.webPath)); 
-
-   await this.geolocationService.getLocation().then((result) => {
-    this.latitude = result.latitude;
-    this.longitude = result.longitude;    
-   }).catch((error) => {
-      return throwError("Error: " + error.message);
-   });      
+    this.getLocationByService();
   }
 
+  async getLocationByService(){
+    await this.geolocationService.getLocation().then((result) => {
+      this.latitude = result.latitude;
+      this.longitude = result.longitude;    
+     }).catch((error) => {
+        return throwError("Error: " + error.message);
+     }); 
+  }
 }

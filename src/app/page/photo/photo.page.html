@@ -11,7 +11,7 @@
 <ion-content [fullscreen]="true">
     <img alt="Photo" [src]="photo">
     <ion-item *ngIf="latitude && longitude">
-        <ion-label>Ubicación</ion-label>
+        <ion-label>Location:</ion-label>
         <ion-note slot="end" color="danger">(Latitude: {{ latitude }}, Longitude: {{ longitude }})</ion-note>
     </ion-item>
 
