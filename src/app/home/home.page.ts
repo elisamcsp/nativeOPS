@@ -20,5 +20,6 @@ export class HomePage {
   goToList(){
     this.navController.navigateForward('/list');
   }
+  
 
 }

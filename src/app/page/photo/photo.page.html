@@ -9,12 +9,10 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    <img alt="Photo" [src]="photo">
     <ion-item *ngIf="latitude && longitude">
-        <ion-label>Location:</ion-label>
-        <ion-note slot="end" color="danger">(Latitude: {{ latitude }}, Longitude: {{ longitude }})</ion-note>
+        <ion-label>Location: [ {{ latitude }}, {{ longitude }} ] </ion-label>
     </ion-item>
-
+    <img alt="Photo" [src]="photo">
     <ion-fab vertical="bottom" horizontal="center" slot="fixed">
         <ion-fab-button (click)="takePicture()">
             <ion-icon name="camera"></ion-icon>

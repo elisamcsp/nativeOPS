@@ -1,5 +1,5 @@
-<ion-header [translucent]="true">
-    <ion-toolbar>
+<ion-header>
+    <ion-toolbar color="primary">
         <ion-title>
             Native OPS
         </ion-title>
@@ -7,17 +7,55 @@
 </ion-header>
 
 <ion-content>
-    <ion-text>
-        <h5>Esta aplicación se desarrolló con el objetivo de probar las siguientes funciones nativas: </h5>
-        <ul>
-            <li>Geolocalización del dispositivo</li>
-            <li>Utilización de la cámara</li>
-        </ul>
-        <p> Se implementó una funcionalidad que permite acceder a la cámara del dispositivo y tirar una foto, y un servicio que devuelve la geolocalización.</p>
-    </ion-text>
 
-    <section>
-        <ion-button expand="block" color="secondary" (click)="goToPhoto()">Take photo</ion-button>
-        <ion-button expand="block" color="warning" (click)="goToList()">Element list</ion-button>
-    </section>
-</ion-content>
+    <ion-content fullscreen class="ion-padding" scroll-y="false">
+        <ion-slides>
+            <ion-slide>
+                <div class="slide">
+                    <img src="https://github.com/ionic-team/ionic-docs/blob/main/static/demos/api/slides/slide-1.png?raw=true" />
+                    <h2>Welcome</h2>
+                    <p>
+                        This application was developed for the purpose of testing <b>native features</b>.
+                    </p>
+                </div>
+            </ion-slide>
+
+            <ion-slide>
+                <img src="https://github.com/ionic-team/ionic-docs/blob/main/static/demos/api/slides/slide-2.png?raw=true" />
+                <h2>Native functionalities</h2>
+                <p>
+                    Native functionalities such as <b>device geolocation</b> and <b>camera use </b>.
+                </p>
+            </ion-slide>
+
+            <ion-slide>
+                <img src="https://github.com/ionic-team/ionic-docs/blob/main/static/demos/api/slides/slide-4.png?raw=true" />
+                <h2>What this app does?</h2>
+                <p>
+                    A functionality was implemented that allows access to the device's <b>camera and take a photo</b>, and a service that returns the <b>geolocation</b>.
+                </p>
+            </ion-slide>
+
+            <ion-slide>
+                <img src="https://github.com/ionic-team/ionic-docs/blob/main/static/demos/api/slides/slide-3.png?raw=true" />
+                <h2>Ready? </h2>
+                <ion-button fill="clear" (click)="goToPhoto()">Take a photo
+                    <ion-icon slot="end" name="arrow-forward"></ion-icon>
+                </ion-button>
+            </ion-slide>
+        </ion-slides>
+
+        <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+            <ion-fab-button color="dark">
+                <ion-icon md="caret-up" ios="chevron-up-circle-outline"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-list side="top">
+                <ion-fab-button color="light" routerLink="/list">
+                    <ion-icon name="list"></ion-icon>
+                </ion-fab-button>
+                <ion-fab-button color="light" routerLink="/photo">
+                    <ion-icon name="camera"></ion-icon>
+                </ion-fab-button>
+            </ion-fab-list>
+        </ion-fab>
+    </ion-content>
